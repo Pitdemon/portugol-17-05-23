@@ -1,0 +1,42 @@
+programa {
+
+inclua biblioteca Util --> u
+
+  funcao inicio() {
+    inteiro contPositivo = 0, contNegativo = 0
+    inteiro numero1 = u.sorteia(-50, 25)
+    inteiro numero2 = u.sorteia(-50, 25)
+    inteiro numero3 = u.sorteia(-50, 25)
+    inteiro numero4 = u.sorteia(-50, 25)
+
+    escreva(numero1, ", ", numero2, ", ", numero3, " e ", numero4)
+
+    se(numero1 < 0){
+      contNegativo++ 
+    } senao {
+      contPositivo++
+    }
+
+    se(numero2 < 0){
+      contNegativo++ 
+    } senao {
+      contPositivo++
+    }
+
+    se(numero3 < 0){
+      contNegativo++ 
+    } senao {
+      contPositivo++
+    }
+
+    se(numero4 < 0){
+      contNegativo++ 
+    } senao {
+      contPositivo++
+    }
+
+    escreva("\nPositivos: ", contPositivo)
+    escreva("\nNegativos: ", contNegativo)
+
+  }
+}
