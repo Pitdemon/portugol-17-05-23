@@ -1,0 +1,24 @@
+programa {
+
+  inclua biblioteca Util --> u
+
+  funcao inicio() {
+
+    inteiro numero, loop = 1, contPositivo = 0, contNegativo = 0
+
+    enquanto(loop <=4){
+      numero = u.sorteia(-50, 25)
+      escreva(numero, " ")
+      se(numero < 0){
+        contNegativo++
+      }senao{
+        contPositivo++
+      }
+      loop++
+    }
+
+    escreva("\nPositivos: ", contPositivo)
+    escreva("\nnegativos: ", contNegativo)
+    
+  }
+}
