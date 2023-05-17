@@ -1,0 +1,14 @@
+programa {
+  funcao inicio() {
+    //loop enqunto while boolean
+
+    logico  acertou = verdadeiro
+
+    enquanto(acertou){
+      escreva("LIXXOOOOO POGGERSSSSSS \n")
+
+    }//fim do loop
+
+
+  }
+}
