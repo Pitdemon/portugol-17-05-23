@@ -1,0 +1,15 @@
+programa {
+  funcao inicio() {
+    //loop enqunto while boolean
+
+    inteiro numero = 1
+
+    enquanto(numero <= 10){
+      escreva("LIXXOOOOO POGGERSSSSSS\n")
+      numero++
+
+    }//fim do loop
+
+
+  }
+}
