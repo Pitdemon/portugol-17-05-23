@@ -1,0 +1,32 @@
+programa {
+  inclua biblioteca Texto --> tx
+
+  funcao inicio() {
+    inteiro posicao, numeroCaracter
+    cadeia cidade 
+    cadeia sair = "s"
+
+    escreva("Digite um nome de cidade: ")
+    leia(cidade)
+
+    numeroCaracter = tx.numero_caracteres(cidade)
+    posicao = tx.posicao_texto("u", cidade, 0)
+
+    escreva("A cidade ", cidade, " Tem ", numeroCaracter, " caracteres\n")
+    
+    se(posicao > 0){
+      escreva(cidade, " tem a leta u.")
+    }senao{
+      escreva(cidade, " não tem a leta u.")
+
+    }
+    enquanto(sair == "s"){
+      escreva("\nExecutando loop...")
+
+      escreva("Deseja continuar? \n(s)Sim \n(n)Não \n")
+      leia(sair)
+
+    }
+
+  }
+}
