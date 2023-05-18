@@ -1,0 +1,74 @@
+programa {
+
+  inclua biblioteca Texto --> t
+  inclua biblioteca Util --> u
+  inclua biblioteca Matematica --> m
+
+  funcao inicio() {
+    cadeia opcao = "a"
+    inteiro numero1, numero2
+
+    enquanto(opcao != "e"){ //comparaçao diferente !=
+      numero1 = u.sorteia(10, 175)
+      numero2 = u.sorteia(10, 175)
+      escreva("\n", numero1, " ", numero2, "\n")
+    
+      escreva("\nEscolha uma opção: "
+      + "\n(a)A multiplicação dos números"
+      + "\n(b)Qual o maior dos números"
+      + "\n(c)Qual e o menor dos números"
+      + "\n(d)Mostrar a Raiz quadrada do menor número"
+      + "\n(e)Sair "
+      + "\nResposta: ")
+      leia(opcao)
+      limpa()
+      opcao = t.caixa_baixa(opcao)
+      escolha(opcao){
+        caso "a" : //Case
+        escreva(numero1, " x ", numero2, " = ", (numero1 * numero2))
+        pare //Break
+
+        caso "b" : //Case
+          se(numero1 > numero2){
+            escreva("\nMaior: ", numero1)
+          }senao se(numero2 > numero1){
+            escreva("Maior: ", numero2)
+          }senao{
+            escreva("\nOs números são iguais")
+          }
+        pare //Break
+
+        caso "c" : //Case
+        se(numero1 < numero2){
+            escreva("\nMenor: ", numero1)
+          }senao se(numero2 < numero1){
+            escreva("Menor: ", numero2)
+          }senao{
+            escreva("\nOs números são iguais")
+          }
+        pare //Break
+
+        caso "d" : //Case
+        se(numero1 < numero2){
+            escreva("\nRaiz Quadrada: ", (m.raiz(numero1, 2)))
+          }senao se(numero2 < numero1){
+            escreva("Raiz Quadrada: ", (m.raiz(numero2, 2)))
+          }senao{
+            escreva("\nOs números são iguais")
+          }
+        pare //Break
+
+        caso "e" : //Case
+        escreva("\nFinalizar Sistema...\n")
+        pare //Break
+
+        caso contrario:
+         escreva("\nOpção inválida!\n")
+      }
+
+
+
+    }//fim do loop 
+    
+  }
+}
