@@ -2,12 +2,13 @@ programa {
   inclua biblioteca Texto --> tx
 
   funcao inicio() {
-    inteiro posicao, numeroCaracter
+    inteiro posicao, numeroCaracter, qtVezes = 0
     cadeia cidade, continua = "sim"
     cadeia sair = "s"
 
     enquanto(continua == "sim" ou continua == "s"){
 
+    qtVezes++
     escreva("\nDigite um nome de cidade: ")
     leia(cidade)
 
@@ -21,10 +22,11 @@ programa {
     }senao{
       escreva(cidade, " não tem a leta u.")
       }
-      escreva("\n", "\nDeseja continuar vendo outra cidade? ", "\n(s)Sim \n(N)Não")
+      escreva("\n", "\nDeseja continuar vendo outra cidade? ", "\n(s)Sim \n(N)Não", "\n")
       leia(continua)
 
     }
 
+    escreva("\nVocê verificou " + qtVezes + " vezes.")
   }
 }
