@@ -3,10 +3,12 @@ programa {
 
   funcao inicio() {
     inteiro posicao, numeroCaracter
-    cadeia cidade 
+    cadeia cidade, continua = "sim"
     cadeia sair = "s"
 
-    escreva("Digite um nome de cidade: ")
+    enquanto(continua == "sim" ou continua == "s"){
+
+    escreva("\nDigite um nome de cidade: ")
     leia(cidade)
 
     numeroCaracter = tx.numero_caracteres(cidade)
@@ -18,13 +20,9 @@ programa {
       escreva(cidade, " tem a leta u.")
     }senao{
       escreva(cidade, " não tem a leta u.")
-
-    }
-    enquanto(sair == "s"){
-      escreva("\nExecutando loop...")
-
-      escreva("Deseja continuar? \n(s)Sim \n(n)Não \n")
-      leia(sair)
+      }
+      escreva("\n", "\nDeseja continuar vendo outra cidade? ", "\n(s)Sim \n(N)Não")
+      leia(continua)
 
     }
 
